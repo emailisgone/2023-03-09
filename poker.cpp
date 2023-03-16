@@ -16,7 +16,7 @@ Card::Card(){
     value = face+1;
 }
 
-Card::Card(int suit = 0, int face = 0){
+Card::Card(int suit, int face){
     if(suit>3 || suit<0){
         std::cout<<"Incorrect suit chosen. Program was terminated.";
         exit(1);
@@ -54,7 +54,7 @@ DeckOfCards::~DeckOfCards(){
 }
 
 void DeckOfCards::shuffle(){
-    //auto rnd = std::default_random_engine{};
+    //auto rnd = std::default_random_engine(837);
     //std::shuffle(deck.begin(), deck.end(), rnd);
 
     for(int i=0; i<sizeOfDeck; ++i){
@@ -83,8 +83,7 @@ Card DeckOfCards::dealCard(){
 // -----------------------------------------POKER HAND CLASS-----------------------
 
 PokerHand::PokerHand(){
-    this->hand = std::vector<Card>();
-
+    
 }
 
 PokerHand::~PokerHand(){
@@ -150,8 +149,8 @@ int PokerHand::evaluateScore(){
 
 int main(){
     std::srand(static_cast<unsigned int>(std::time(nullptr)));
-    //Card card = Card(0,8);
-    //std::cout<<card.toString();
+    Card card = Card(3);
+    std::cout<<card.toString();
     DeckOfCards theDeck;
     theDeck.shuffle();
 //    for(int i=0; i<52; ++i){

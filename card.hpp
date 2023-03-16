@@ -12,8 +12,8 @@ class Card{
 
     public:
     int value;
-    Card(); 
-    Card(int suit, int face);
+    Card();
+    Card(int suit, int face = 0);
     ~Card();
 
     std::string toString();
