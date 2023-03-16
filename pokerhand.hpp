@@ -11,6 +11,7 @@ class PokerHand{
     public:
     PokerHand();
     ~PokerHand();
+    void setHand(std::vector<Card> hand);
     void dealHand(DeckOfCards* deck);
     void showHand();
     int onePairValue();

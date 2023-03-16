@@ -11,9 +11,13 @@ class Card{
     static const std::string faces[];
 
     public:
+    void setSuit(int number);
+    void setFace(int number);
+    int getSuit();
+    int getFace();
     int value;
     Card();
-    Card(int suit, int face = 0);
+    Card(int suit, int face);
     ~Card();
 
     std::string toString();
