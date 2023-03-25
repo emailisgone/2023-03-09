@@ -15,7 +15,6 @@ class Card{
     void setFace(int number);
     int getSuit();
     int getFace();
-    int value;
     Card();
     Card(int suit, int face);
     ~Card();

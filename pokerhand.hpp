@@ -14,6 +14,7 @@ class PokerHand{
     void setHand(std::vector<Card> hand);
     void dealHand(DeckOfCards* deck);
     void showHand();
+    std::vector<Card> getHand();
     int onePairValue();
     int twoPairValue();
     int highCardValue();

@@ -63,6 +63,10 @@ int PokerHand::highCardValue(){
     return max;
 }
 
+std::vector<Card> PokerHand::getHand(){
+    return this->hand;
+}
+
 int PokerHand::evaluateScore(){
     if(onePairValue()!=0) return onePairValue()+100;
     if(twoPairValue()!=0) return twoPairValue()+50;
